@@ -1,5 +1,5 @@
 import { db } from "./db.ts";
-import { Bookmark, MyContext, MyConversation } from "./types.ts";
+import { MyContext, MyConversation } from "./types.ts";
 
 export async function addBookmark(
   conversation: MyConversation,
@@ -45,7 +45,7 @@ export async function addBookmark(
 
 export async function showBookmarks(ctx: MyContext) {
   const result = await db.execute("SELECT * FROM bookmarks");
-  const bookmarks: Bookmark[] = result.rows;
+  const bookmarks = result.rows;
 
   const displayBookmarks = bookmarks.map((bm, idx) => `${idx + 1}. ${bm.title}`)
     .join("\n");

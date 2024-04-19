@@ -1,19 +1,33 @@
-import { webhookCallback } from "https://deno.land/x/grammy@v1.22.4/mod.ts";
-// You might modify this to the correct way to import your `Bot` object.
-import { bot } from "./bot.ts";
+import {
+  Bot,
+  webhookCallback,
+} from "https://deno.land/x/grammy@v1.22.4/mod.ts";
+import { UserFromGetMe } from "https://deno.land/x/grammy@v1.22.4/types.ts";
 
-const handleUpdate = webhookCallback(bot, "std/http");
+interface Environment {
+  BOT_TOKEN: string;
+}
 
-Deno.serve(async (req) => {
-  if (req.method === "POST") {
-    const url = new URL(req.url);
-    if (url.pathname.slice(1) === bot.token) {
-      try {
-        return await handleUpdate(req);
-      } catch (err) {
-        console.error(err);
+let botInfo: UserFromGetMe | undefined = undefined;
+
+export default {
+  async fetch(request: Request, env: Environment) {
+    try {
+      const bot = new Bot(env.BOT_TOKEN, { botInfo });
+
+      if (botInfo === undefined) {
+        await bot.init();
+        botInfo = bot.botInfo;
       }
+
+      bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
+      bot.on("message", (ctx) => ctx.reply("Got another message!"));
+
+      const cb = webhookCallback(bot, "cloudflare-mod");
+
+      return await cb(request);
+    } catch (e) {
+      return new Response(e.message);
     }
-  }
-  return new Response();
-});
+  },
+};
