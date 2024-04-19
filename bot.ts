@@ -19,7 +19,7 @@ if (!botToken) {
   throw new Error("BOT_TOKEN is required");
 }
 
-const bot = new Bot<MyContext>(botToken);
+export const bot = new Bot<MyContext>(botToken);
 
 bot.catch((err) => {
   const ctx = err.ctx;
