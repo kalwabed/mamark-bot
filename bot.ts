@@ -28,15 +28,18 @@ bot.use(createConversation(addBookmark));
 bot.api.setMyCommands([
   { command: "new", description: "Add new bookmark" },
   { command: "show", description: "Show all bookmarks" },
+  { command: "detail", description: "Show detail a bookmark" },
 ]);
 
 bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
 bot.command("new", async (ctx) => {
   return await ctx.conversation.enter("addBookmark");
 });
-bot.command("show", async (ctx) => {
-  return await showBookmarks(ctx);
-});
+bot.command("show", async (ctx) => await showBookmarks(ctx));
+bot.command(
+  "detail",
+  async (ctx) => await ctx.conversation.enter("bookmarkDetail"),
+);
 
 // Start the bot.
 await bot.start();
