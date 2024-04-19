@@ -60,6 +60,18 @@
     "https://deno.land/x/grammy_types@v3.6.2/update.ts": "cfacb5558cd7d50fb90076abc16102a52e435ab88b2991c698e48928e515b50e",
     "https://deno.land/x/oson@1.0.1/constructors.ts": "2b77dcdc8d8db5ece2860d1657f4dcef37dd761684f1d4b9535c7e56a0fbfcf6",
     "https://deno.land/x/oson@1.0.1/mod.ts": "54e494dc517ce0de6c727c25d9731ccc748e8646c883e922dc5d656f523a4e5b",
-    "https://deno.land/x/oson@1.0.1/oson.ts": "ec3908ae5c9ceff7bfd869d95a2183b929b9d96fbff44b57d28d3b742d06a4a1"
+    "https://deno.land/x/oson@1.0.1/oson.ts": "ec3908ae5c9ceff7bfd869d95a2183b929b9d96fbff44b57d28d3b742d06a4a1",
+    "https://esm.sh/@libsql/client@0.6.0/web": "198903e59f4e0ec625c14a893d7c812785642fadf5064e737fa8347d1aab9c05",
+    "https://esm.sh/v135/@libsql/client@0.6.0/denonext/http.js": "9c6bf3c4980d1f565f3ad55ab9e85051e5ec76ea6f67c4c124969cc0f3d80c13",
+    "https://esm.sh/v135/@libsql/client@0.6.0/denonext/web.js": "99e33e66afd38e9d47fbaab8500d1d7735631c5cca810a043963cc8701d1607e",
+    "https://esm.sh/v135/@libsql/client@0.6.0/denonext/ws.js": "3032bb9f5c95f77af9f9211fb6a27090f926c1c3e436258ce6496894b7b768ea",
+    "https://esm.sh/v135/@libsql/core@0.6.0/denonext/api.js": "0e71f233dc34791cca0dd45886c22d82635ab1446bac309b6ff9d10528e9338c",
+    "https://esm.sh/v135/@libsql/core@0.6.0/denonext/config.js": "8ace1893723b3ea4575534e66ec555e97674a6bba7f825c51f1df2658c475021",
+    "https://esm.sh/v135/@libsql/core@0.6.0/denonext/uri.js": "a96d9438c52762520454781575e895ee9244e00a69f38b26bfe3f1942a9fc09a",
+    "https://esm.sh/v135/@libsql/core@0.6.0/denonext/util.js": "1b58b1829869a3f0c291d6825dfa8e50055490e26fdee20417123a28c240fc22",
+    "https://esm.sh/v135/@libsql/hrana-client@0.6.0/denonext/hrana-client.mjs": "77dccb477aee19bbeb4d03337331d12ee1690ee4928a0bb15105caa887ee8491",
+    "https://esm.sh/v135/@libsql/isomorphic-fetch@0.2.1/denonext/isomorphic-fetch.mjs": "24cee0c53649a1eb06e0fe31af260a9f7c49b8e55600b90fa6d838c9eecb14f4",
+    "https://esm.sh/v135/@libsql/isomorphic-ws@0.1.5/denonext/isomorphic-ws.mjs": "4b5e1cd9247271ed5424dfc0b715f791a57c28a2b0570cadf48e17791404f056",
+    "https://esm.sh/v135/js-base64@3.7.7/denonext/js-base64.mjs": "dd9df6c872f92919ced96308c346507cd05799eb9e89987bb414fa2b834d7d63"
   }
 }
