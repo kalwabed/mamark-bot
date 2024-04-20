@@ -12,6 +12,6 @@ kill_timeout = '5s'
 app = 'run --allow-env --allow-net --allow-read ./bot.ts'
 
 [[vm]]
-memory = '1gb'
+memory = '500mb'
 cpu_kind = 'shared'
 cpus = 1
