@@ -48,11 +48,17 @@ bot.api.setMyCommands([
   { command: "show", description: "Show all bookmarks" },
 ]);
 
-bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
+bot.command(
+  "start",
+  (ctx) => ctx.reply("Welcome! Markmark bot is up and running."),
+);
 bot.command("new", async (ctx) => {
   return await ctx.conversation.enter("addBookmark");
 });
 bot.command("show", async (ctx) => await showBookmarks(ctx));
+
+Deno.addSignalListener("SIGINT", () => bot.stop());
+Deno.addSignalListener("SIGTERM", () => bot.stop());
 
 // Start the bot.
 await bot.start();
